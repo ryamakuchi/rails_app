@@ -162,3 +162,22 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  clients:
+    default:
+      database: rails_app_production
+      hosts:
+        - localhost:27017
+      options:
+        # The name of the user for authentication.
+        user: <%= Rails.application.credentials.mongo[:user] %>
+        # The password of the user for authentication.
+        password: <%= Rails.application.credentials.mongo[:password] %>
+        # The user's database roles.
+        roles:
+          - 'dbOwner'
+        auth_source: admin
+        read:
+          mode: :primary
+        max_pool_size: 10
