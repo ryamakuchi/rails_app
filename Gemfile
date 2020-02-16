@@ -6,6 +6,9 @@ ruby '2.7.0'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+# Use DB
+gem 'mongoid', '~> 7.0.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use SCSS for stylesheets
