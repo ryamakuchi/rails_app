@@ -2,7 +2,7 @@ namespace :unicorn do
   desc 'Start Unicorn'
   task :start do
     config = Rails.root.join('config', 'unicorn.rb')
-    sh "unicorn -c #{config} -E development -D"
+    sh "unicorn -c #{config} -E production -D"
   end
 
   desc 'Stop Unicorn'
